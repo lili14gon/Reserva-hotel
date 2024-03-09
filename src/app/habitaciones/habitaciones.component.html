@@ -1,0 +1,29 @@
+
+<header>HABITACIONES</header>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item" id="disponible">
+            <label (click)="disponible()">Disponible</label>
+          </li>
+          <li class="nav-item" id="reservado">
+            <label (click)="reservado()">Reservado</label>
+          </li>
+          <li class="nav-item" id="pendiente">
+            <label (click)="pendiente()">Pendiente</label>
+          </li>
+        </ul>
+    </div>
+  </nav>
+  <div class="container" *ngIf="estado==4">
+    <app-tabla [habitaciones]="habitacion" [valor]="estado"></app-tabla>
+  </div>
+  <div class="container" *ngIf="estado==1" >
+    <app-tabla [habitaciones]="soloDisponible" [valor]="estado"></app-tabla>
+  </div>
+  <div class="container" *ngIf="estado==2" >
+    <app-tabla [habitaciones]="soloReservado" [valor]="estado"></app-tabla>
+  </div>
+  <div class="container" *ngIf="estado==3" >
+    <app-tabla [habitaciones]="soloPendiente" [valor]="estado"></app-tabla>
+  </div>

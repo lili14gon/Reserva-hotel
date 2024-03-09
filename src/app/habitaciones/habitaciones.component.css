@@ -1,0 +1,15 @@
+header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+nav{
+    height: 50px;
+}
+
+#disponible,#reservado,#pendiente{
+    padding-left: 100px;
+}
+label{
+    cursor: pointer;
+}
